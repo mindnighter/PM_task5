@@ -103,9 +103,17 @@ let str = `<!DOCTYPE html>
 
 let regHex = /#[0-9a-f]{3,6}/g;
 let regPhone = /\+ \(380\)-? ?(067|068|096|097|098|050|066|095|099|063|073|093)\s\d{3}\s\d{2}\s\d{2}/g;
+let regScript = /<\/? ?script ?.*>/g;
+let regH1 = /<\/? ?h1 ?>/g;
 
 let result = str.match(regHex);
 console.log(result);
 
 result = str.match(regPhone);
 console.log(result);
+
+result = str.match( regScript);
+console.log(result);
+
+let newStr = str.replace(regH1, "<h2/>");
+console.log(newStr);

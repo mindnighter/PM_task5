@@ -15,7 +15,7 @@ do{
     let num2 = prompt("Введите степень (натуральное число)",2);
     if(isNaN(num1) || isNaN(num2)){
         alert("Нужно вводить числа!");
-    } else if(Number.isInteger(+num2)){
+    } else if(Number.isInteger(+num2) && num2 >= 0){
         exponentiation(num1,num2);
     } else{
         alert("Введите степень натуральным числом!");
